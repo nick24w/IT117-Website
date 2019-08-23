@@ -1,0 +1,181 @@
+<!doctype html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Dock on the Bay Bar & Grill - Contact Us Page</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style type="text/css">
+
+form {
+background-color: #ff8000;
+color: #000000;
+width: 90%;
+border: 2px dashed #000000;
+border-radius: 20px;
+padding: 10px;
+}
+
+input {
+background-color: #4c4c4c;
+color: #ffffff;
+border: 2px solid #00a2e8;
+}
+
+
+textarea {
+background-color: #4c4c4c;
+color: #ffffff;
+border: 2px solid #00a2e8;
+}
+
+
+select {
+background-color: #4c4c4c;
+color: #ffffff;
+border: 2px solid #00a2e8;
+}
+
+
+input[type=submit]{
+background-color: #00ff00;
+font-family: Verdana, Tahoma, sans-serif;
+color: #000000;
+border: 2px solid #00a2e8;
+}
+
+input[type=reset]{
+background-color: #ff0000;
+font-family: Verdana, Tahoma, sans-serif;
+color: #ffffff;
+border: 2px solid #00a2e8;
+}
+
+input[type=number]{
+background-color: #00a2e8;
+color: #ffffff;
+border: 2px solid #00a2e8;
+}
+
+.message {
+color: #ffffff;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="images/logo.jpg" alt="boat" width="200" height="200">
+<h1>Contact Dock on the Bay Bar & Grill</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home Page</a></li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="history.html">History</a></li>
+<li><a href="chef.html">Chef</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+<li><a href="links.html">Links</a></li>
+</ul>
+</nav>
+
+<main>
+
+<h2>Contact Us</h2>
+<p>Email:<br>
+<a href="mailto:dockbarandgrill@gmail.com">dockbarandgrill@gmail.com</a></p>
+<p>Address:<br>
+2323 Dock Street<br>
+Rock Hall, MD 22222</p>
+<p>Phone:<br>
+(443)-999-8888</p>
+
+<h2>Let Us Know What You Are Thinking</h2>
+<form action="" method="post" autocomplete="on">
+
+<select name="prefix">
+<option>Select One</option>
+<option value="mr">Mr.</option>
+<option value="mrs">Mrs.</option>
+<option value="ms">Ms.</option>
+</select>
+
+<br>
+<br>
+
+<label>First Name:</label>
+<input type="text" name="first_name" required>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<label>Last Name:</label>
+<input type="text" name="Last_name">&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+<label>Email:</label>
+<input type="text" name="Email" autocomplete="off" required>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<label>Phone:</label>
+<input type="text" name="Phone">&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+<p><strong>Prefered Method of Contact</strong>
+<br>
+<em>Select one</em></p>
+
+<input type="radio" name="gender" value="email" checked> Email<br>
+<input type="radio" name="gender" value="phone"> Phone<br>
+
+<br>
+
+<p><strong>What is your favorite part of Dock on the Bay Bar & Grill?</strong>
+<br>
+<em>Check all that apply</em></p>
+
+<input type="checkbox" name="like1" value="views"> Chesapeake Bay views!<br>
+<input type="checkbox" name="like1" value="atmosphere"> Family friendly & fun atmosphere!<br>
+<input type="checkbox" name="like1" value="food"> The amazing food!<br>
+<input type="checkbox" name="like1" value="all"> What's not to like!<br>
+
+
+<p>Comments:</p>
+<textarea rows="20" cols="50"></textarea>
+
+<br>
+
+<h2>Enter your Four-digit passcode, then click OK:</h2>
+<p><em>Use a value between 1000 and 9999</em></p>
+
+<input id="id1" type="number" min="1000" max="9999" required>
+<button onclick="myFunction()">OK</button>
+
+<p id="passcode" class="message"></p>
+
+<script>
+function myFunction() {
+var inpObj = document.getElementById("id1");
+if (inpObj.checkValidity() == false) {
+document.getElementById("passcode").innerHTML =
+inpObj.validationMessage;
+} else {
+document.getElementById("passcode").innerHTML = "Passcode Valid";
+}
+}
+</script>
+
+<br>
+
+<input type="reset" value="Reset Form">
+<input type="submit" value="Submit Form">
+</form>
+
+</main>
+
+<footer>
+<p><a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="menu.html">Menu</a> | <a href="history.html">History</a> | <a href="chef.html">Chef</a> |  <a href="contactus.html">Contact Us</a> | <a href="links.html">Links</a></p>
+</footer>
+
+</body>
+
+</html>
